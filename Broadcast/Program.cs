@@ -15,8 +15,8 @@ class Broadcast
         string hostname = Dns.GetHostName();
         byte[] data = Encoding.ASCII.GetBytes(hostname);
         sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.Broadcast, 1);
-        //sock.SendTo(data, iep1);
-        //sock.SendTo(data, iep2);
+        sock.SendTo(data, iep1);
+        sock.SendTo(data, iep2);
 
 
         //sock.Bind(ep);

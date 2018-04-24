@@ -19,29 +19,29 @@ class RecvBroadcst
         string stringData = Encoding.ASCII.GetString(data, 0,
         recv);
 
-        Stopwatch s = new Stopwatch();
-        s.Start();
-        for (int i = 0; i < 1000; i++)
-        {
-            
-                System.Threading.Thread.Sleep(10);
-                Console.WriteLine("received: {0} from: {1}", stringData, ep.ToString());
-                data = new byte[1024];
-                recv = sock.ReceiveFrom(data, ref ep);
-                stringData = Encoding.ASCII.GetString(data, 0, recv);
-                Console.WriteLine("received: {0} from: {1}", stringData, ep.ToString());
-                sock.Close();
+        //Stopwatch s = new Stopwatch();
+        //s.Start();
+        //for (int i = 0; i < 1000; i++)
+        //{
+
+        //        System.Threading.Thread.Sleep(10);
+        //        Console.WriteLine("received: {0} from: {1}", stringData, ep.ToString());
+        //        data = new byte[1024];
+        //        recv = sock.ReceiveFrom(data, ref ep);
+        //        stringData = Encoding.ASCII.GetString(data, 0, recv);
+        //        Console.WriteLine("received: {0} from: {1}", stringData, ep.ToString());
+        //        sock.Close();
 
 
-            
-        }
-        s.Stop();
-        //Console.WriteLine("received: {0} from: {1}",
-        //stringData, ep.ToString());
-        //data = new byte[1024];
-        //recv = sock.ReceiveFrom(data, ref ep);
-        //stringData = Encoding.ASCII.GetString(data, 0, recv);
-        //Console.WriteLine("received: {0} from: {1}", stringData, ep.ToString());
+
+        //}
+        //s.Stop();
+        Console.WriteLine("received: {0} from: {1}",
+        stringData, ep.ToString());
+        data = new byte[1024];
+        recv = sock.ReceiveFrom(data, ref ep);
+        stringData = Encoding.ASCII.GetString(data, 0, recv);
+        Console.WriteLine("received: {0} from: {1}", stringData, ep.ToString());
         sock.Close();
         
     }
