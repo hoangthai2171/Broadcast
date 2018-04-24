@@ -1,0 +1,4 @@
+D:\Broadcast\RecBroadcast\bin\Debug\RecBroadcast.exe
+D:\Broadcast\RecBroadcast\bin\Debug\RecBroadcast.pdb
+D:\Broadcast\RecBroadcast\obj\x86\Debug\RecBroadcast.exe
+D:\Broadcast\RecBroadcast\obj\x86\Debug\RecBroadcast.pdb
